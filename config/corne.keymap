@@ -72,9 +72,12 @@
                         compatible = "zmk,behavior-tap-dance";
                         label = "TAP_DANCE_0";
                         #binding-cells = <0>;
-                        tapping-term-ms = <200>;
+                        tapping-term-ms = <100>;
                         bindings = <&kp LSHFT>, <&kp CAPS>;
                 };
+        };
+        &mt {
+                tapping-term-ms = <250>;
         };
         keymap {
                 compatible = "zmk,keymap";
@@ -91,8 +94,8 @@
 // |   SHFT    |    Z    |    X    |    C    |    V    |    B    |   |    N    |    M    |    ,    |    .    |    /    |    `    |
       &td0        &kp Z     &kp X     &kp C     &kp V     &kp B         &kp N     &kp M   &kp COMMA  &kp DOT  &kp FSLH  &mt RSHFT GRAVE
 // ---------------------------------------------------------------   -------------------------------------------------------------
-//                                 |   GUI   |   LWR   |   SPC   |   |   BKSP  |   RSE   |   ALT   |
-                                     &kp LGUI   &mo 1   &kp SPACE      &kp BSPC   &mo 2    &kp LALT
+//                                 |   ALT   |   LWR   |   SPC   |   |   BKSP  |   RSE   |   GUI   |
+                                    &kp LALT    &mo 1   &kp SPACE      &kp BSPC   &mo 2    &kp LGUI
                                  // --------------------------------------------------------------
                         >;
                 };
