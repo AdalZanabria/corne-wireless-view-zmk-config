@@ -18,49 +18,49 @@
                 compatible = "zmk,combos";
                 combo_LPAR {
                         timeout-ms = <50>;
-                        key-positions = <28 29>;
+                        key-positions = <27 28>;
                         bindings = <&kp LPAR>;
                         layers = <0>;
                 };
                 combo_RPAR {
                         timeout-ms = <50>;
-                        key-positions = <30 31>;
+                        key-positions = <31 32>;
                         bindings = <&kp RPAR>;
                         layers = <0>;
                 };
                 combo_LBRC {
                         timeout-ms = <50>;
-                        key-positions = <27 28>;
+                        key-positions = <26 27>;
                         bindings = <&kp LBRC>;
                         layers = <0>;
                 };
                 combo_RBRC {
                         timeout-ms = <50>;
-                        key-positions = <31 32>;
+                        key-positions = <32 33>;
                         bindings = <&kp RBRC>;
                         layers = <0>;
                 };
                 combo_LBKT {
                         timeout-ms = <50>;
-                        key-positions = <26 27>;
+                        key-positions = <25 26>;
                         bindings = <&kp LBKT>;
                         layers = <0>;
                 };
                 combo_RBKT {
                         timeout-ms = <50>;
-                        key-positions = <32 33>;
+                        key-positions = <33 34>;
                         bindings = <&kp RBKT>;
                         layers = <0>;
                 };
                 combo_RETURN {
                         timeout-ms = <50>;
-                        key-positions = <16 17>;
+                        key-positions = <15 16>;
                         bindings = <&kp RET>;
                         layers = <0>;
                 };
                 combo_DEL {
                         timeout-ms = <50>;
-                        key-positions = <18 19>;
+                        key-positions = <19 20>;
                         bindings = <&kp DEL>;
                         layers = <0>;
                 };
@@ -72,15 +72,7 @@
                 then-layer = <3>;
                 };
         };
-        behaviors {
-                td0: tap_dance_0 {
-                        compatible = "zmk,behavior-tap-dance";
-                        label = "TAP_DANCE_0";
-                        #binding-cells = <0>;
-                        tapping-term-ms = <150>;
-                        bindings = <&kp LSHFT>, <&kp CAPS>;
-                };
-        };
+        behaviors {};
         keymap {
                 compatible = "zmk,keymap";
                 default_layer {
@@ -106,14 +98,14 @@
                         label = "Numbers";
                         bindings = <
 // ---------------------------------------------------------------   -------------------------------------------------------------
-// |     1     |    2    |    3    |    4    |    5    |    6    |   |    7    |    8    |    9    |    0    |         |         |
-       &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &kp N6        &kp N7    &kp N8    &kp N9    &kp N0     &trans    &trans
+// |     1     |    2    |    3    |    4    |    5    |    6    |   |    7    |    8    |    9    |    0    |    =    |         |
+       &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &kp N6        &kp N7    &kp N8    &kp N9    &kp N0  &kp KP_ENTER &trans
 // ---------------------------------------------------------------   -------------------------------------------------------------
-// |           |         |         |         |         |         |   |    4    |    5    |    6    |         |         |         |
-      &trans     &trans    &trans    &trans    &trans    &trans         &kp N4    &kp N5    &kp N6    &trans   &trans    &trans
+// |           |         |         |         |         |         |   |    4    |    5    |    6    |    +    |    *    |         |
+      &trans     &trans    &trans    &trans    &trans    &trans         &kp N4    &kp N5    &kp N6 &kp KP_PLUS &kp KP_MULTIPLY &trans
 // ------------------------------------------------------------------------------------------------------------------------------
-// |   CAPS    |         |         |         |         |         |   |    1    |    2    |    3    |         |         |         |
-     &kp CAPS    &trans    &trans    &trans   &trans    &trans        &kp N1    &kp N2    &kp N3    &trans    &trans    &trans
+// |   CAPS    |         |         |         |         |         |   |    1    |    2    |    3    |    -    |    /    |         |
+     &kp CAPS    &trans    &trans    &trans   &trans    &trans        &kp N1    &kp N2    &kp N3   &kp KP_MINUS &kp KP_DIVIDE &trans
 // ------------------------------------------------------------------------------------------------------------------------------
 //                                 |         |         |         |   |         |         |         |
                                      &trans    &trans    &trans         &trans   &trans     &trans
