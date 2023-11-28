@@ -9,7 +9,8 @@
 #include <dt-bindings/zmk/bt.h>
 
 &mt {
-        tapping-term-ms = <250>;
+        tapping-term-ms = <200>;
+        flavor = "balanced";
 };
 
 / {
@@ -93,7 +94,7 @@
    &mt LCTRL ESC  &kp A     &kp S     &kp D     &kp F     &kp G         &kp H     &kp J     &kp K     &kp L    &kp SEMI  &mt RCTRL SQT
 // ---------------------------------------------------------------   -------------------------------------------------------------
 // |   SHFT    |    Z    |    X    |    C    |    V    |    B    |   |    N    |    M    |    ,    |    .    |    /    |    `    |
-      &td0        &kp Z     &kp X     &kp C     &kp V     &kp B         &kp N     &kp M   &kp COMMA  &kp DOT  &kp FSLH  &mt RSHFT GRAVE
+     &kp LSHFT   &kp Z      &kp X     &kp C     &kp V     &kp B         &kp N     &kp M   &kp COMMA  &kp DOT  &kp FSLH  &mt RSHFT GRAVE
 // ---------------------------------------------------------------   -------------------------------------------------------------
 //                                 |   ALT   |   LWR   |   SPC   |   |   BKSP  |   RSE   |   GUI   |
                                     &kp LALT    &mo 1   &kp SPACE      &kp BSPC   &mo 2    &kp LGUI
@@ -111,8 +112,8 @@
 // |           |         |         |         |         |         |   |    4    |    5    |    6    |         |         |         |
       &trans     &trans    &trans    &trans    &trans    &trans         &kp N4    &kp N5    &kp N6    &trans   &trans    &trans
 // ------------------------------------------------------------------------------------------------------------------------------
-// |           |         |         |         |         |         |   |    1    |    2    |    3    |         |         |         |
-      &trans      &trans    &trans    &trans   &trans    &trans        &kp N1    &kp N2    &kp N3    &trans    &trans    &trans
+// |   CAPS    |         |         |         |         |         |   |    1    |    2    |    3    |         |         |         |
+     &kp CAPS    &trans    &trans    &trans   &trans    &trans        &kp N1    &kp N2    &kp N3    &trans    &trans    &trans
 // ------------------------------------------------------------------------------------------------------------------------------
 //                                 |         |         |         |   |         |         |         |
                                      &trans    &trans    &trans         &trans   &trans     &trans
